@@ -1,0 +1,21 @@
+create table intern(
+    id number not null PRIMARY KEY,
+    ad varchar2(40),
+    soyad varchar2(40),
+    universite varchar2(40),
+    bolum varchar2(40),
+    sinif number,
+    city varchar2(40));
+    
+
+INSERT INTO intern VALUES (1, 'Beytullah' , 'Atik' , 'Karabuk University' , 'Computer Engineering', 3 , 'Edirne');
+INSERT INTO intern VALUES (2, 'Davut' , 'Kurt' , 'Inonu University' , 'Computer Engineering', 4 , 'Malatya');
+INSERT INTO intern VALUES (3, 'Servet' , 'Tatar' , 'Munzur University' , 'Computer Engineering', 4 , 'Mersin');
+INSERT INTO intern VALUES (4, 'Tolga' , 'Çatalpýnar' , 'Bilkent University' , 'Computer Engineering', 2 , 'Ankara');
+INSERT INTO intern VALUES (5, 'Aysegul' , 'Karahançer' , 'Yildiz Teknik University' , 'Computer Engineering', 3 , 'Kayseri');
+INSERT INTO intern VALUES (6, 'Gizem nur' , 'Taskin' , 'Ýstanbul Teknik University' , 'Bilisim Engineering', 3 , 'Istanbul');
+INSERT INTO intern VALUES (7, 'Umit' , 'Atilgan' , 'Yildiz Teknik University' , 'Mathmatic Engineering', 4 , 'Corum');
+INSERT INTO intern VALUES (8, 'Melih Sinan' , 'Dogrul' , 'Yildiz Teknik University' , 'Computer Engineering', 3 , 'Trabzon');
+INSERT INTO intern VALUES (9, 'Eren' , 'Yalcin' , 'Bilkent University' , 'Computer Engineering', 3 , 'Ankara');
+INSERT INTO intern VALUES (10, 'Yunus', 'Arslan' , 'ODTU University' , 'Computer Engineering', 2 , 'Antalya');
+INSERT INTO intern VALUES (11, 'Ozge Nur' , 'Koç' , 'Yildiz Teknik University' , 'Computer Engineering', 4 , 'AfyonKarahisar');
