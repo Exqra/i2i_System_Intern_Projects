@@ -1,0 +1,15 @@
+set serveroutput on
+DECLARE
+    str VARCHAR2(50);
+    only_name VARCHAR2(50);
+    first_char_capital VARCHAR2(50);
+    name_index NUMBER;
+    
+    BEGIN
+        str := 'tolga@1999';
+        name_index := INSTR(str, 'tolga');
+        SELECT SUBSTR(str, name_index, 5) INTO only_name FROM DUAL;
+        SELECT initcap(only_name) INTO first_char_capital FROM DUAL;
+    DBMS_OUTPUT.PUT_LINE('Desired String: ' || first_char_capital);
+    END;
+    /
