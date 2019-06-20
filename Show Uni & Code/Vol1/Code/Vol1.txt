@@ -1,0 +1,13 @@
+set serveroutput on
+
+CREATE OR REPLACE PROCEDURE getDepartment(namel VARCHAR2)
+IS
+theDepartment VARCHAR2(50);
+BEGIN
+    
+SELECT DEPARTMENT INTO theDepartment FROM INTERN_TABLE WHERE FIRST_NAME = namel;
+DBMS_OUTPUT.PUT_LINE('The department is = ' || theDepartment);
+
+end;
+/
+EXECUTE getDepartment('Tolga');

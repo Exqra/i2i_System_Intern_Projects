@@ -1,0 +1,13 @@
+SET SERVEROUTPUT ON
+
+CREATE OR REPLACE PROCEDURE get_department(pis_name VARCHAR2)
+IS
+    vs_department VARCHAR2(50);
+    BEGIN
+    
+        SELECT DEPARTMENT INTO vs_department FROM INTERN_TABLE WHERE FIRST_NAME = pis_name;
+        DBMS_OUTPUT.PUT_LINE('The department is = ' || vs_department);
+
+    END;
+    /
+EXECUTE get_department('Tolga');
