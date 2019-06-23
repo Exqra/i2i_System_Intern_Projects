@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <TextArea fx:id="first_name_in" layoutX="79.0" layoutY="116.0" prefHeight="17.0" prefWidth="126.0" />
+      <TextArea fx:id="university_in" layoutX="497.0" layoutY="115.0" prefHeight="21.0" prefWidth="126.0" />
+      <TextArea fx:id="last_name_in" layoutX="298.0" layoutY="115.0" prefHeight="26.0" prefWidth="118.0" />
+      <TextArea fx:id="department_in" layoutX="84.0" layoutY="267.0" prefHeight="38.0" prefWidth="118.0" />
+      <TextArea fx:id="class_in" layoutX="295.0" layoutY="267.0" prefHeight="38.0" prefWidth="139.0" />
+      <TextArea fx:id="city_in" layoutX="497.0" layoutY="267.0" prefHeight="38.0" prefWidth="126.0" />
+      <Text fx:id="first_name_label" layoutX="73.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRST NAME" wrappingWidth="138.99999724328518" />
+      <Text fx:id="last_name_label" layoutX="301.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LAST NAME" wrappingWidth="125.99998588860035" />
+      <Text fx:id="university_label" layoutX="497.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UNIVERSITY" wrappingWidth="125.99998588860035" />
+      <Text fx:id="department_label" layoutX="80.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEPARTMENT" wrappingWidth="125.99999672174454" />
+      <Text fx:id="class_label" layoutX="283.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLASS" wrappingWidth="147.13671875" />
+      <Text fx:id="city_label" layoutX="497.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CITY" wrappingWidth="125.99998588860035" />
+      <Button fx:id="button" layoutX="320.0" layoutY="358.0" mnemonicParsing="false" onAction="#add" prefHeight="45.0" prefWidth="74.0" text="ENTER" />
+   </children>
+</Pane>
