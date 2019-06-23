@@ -1,0 +1,14 @@
+/* Exercise PLSQL01-EX-04:
+Definiton : Write an SQL query that selects first name of the employee with highest employee id.
+(Please use HR.EMPLOYEES table)
+Sample Output :
+Objectives : To learn basic SQL language keywords like SELECT, FROM, WHERE and use analytic or
+group functions like MAX, ROW_NUMBER.
+*/
+
+set serveroutput on
+
+SELECT * FROM (
+SELECT FIRST_NAME, EMPLOYEE_ID, MAX(EMPLOYEE_ID) OVER() MAX_ID FROM HR.EMPLOYEES
+)
+WHERE EMPLOYEE_ID = MAX_ID;

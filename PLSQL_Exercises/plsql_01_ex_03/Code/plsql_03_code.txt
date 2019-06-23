@@ -1,0 +1,13 @@
+set serveroutput on
+DECLARE
+
+CURSOR cur_emp_name IS
+    SELECT FIRST_NAME, LAST_NAME FROM HR.EMPLOYEES;
+
+BEGIN
+    for a IN cur_emp_name
+    loop
+        DBMS_OUTPUT.PUT_LINE( 'Name - Surname = ' || a.FIRST_NAME || ' ' || a.LAST_NAME);
+    END LOOP;
+END;
+/

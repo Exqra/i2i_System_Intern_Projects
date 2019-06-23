@@ -1,0 +1,17 @@
+
+set serveroutput on
+
+DECLARE
+name_1 VARCHAR2(50) := 'ToLGa';
+surname_1 VARCHAR2(50) := 'CatALPiNAR';
+
+name_2 VARCHAR2(50) := 'ahMet';
+surname_2 VARCHAR2(50) := 'CatAL';
+
+BEGIN
+
+DBMS_OUTPUT.PUT_LINE( 'Name - Surname = ' || initcap(LOWER(name_1)) || ' ' || initcap(LOWER(surname_1)));
+DBMS_OUTPUT.PUT_LINE( 'Name - Surname = ' || LOWER(name_2) || ' ' || LOWER(surname_2));
+
+END;
+/
