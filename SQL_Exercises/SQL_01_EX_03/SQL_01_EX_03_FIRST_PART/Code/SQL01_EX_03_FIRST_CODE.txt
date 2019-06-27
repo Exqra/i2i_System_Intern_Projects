@@ -1,0 +1,11 @@
+ /*
+ Definiton : For example; first three character of PHONE_NUMBER column gives us a operator of
+employee. Create a report that displays the operators and their total subscriber. But we want two
+different displays with diffrent queries. (Please use HR.EMPLOYEES table)
+Sample Output :
+Objectives : To learn basic SQL keywords like COUNT, SUM, CASE.
+*/
+
+SELECT * FROM HR.EMPLOYEES;
+SELECT SUBSTR(PHONE_NUMBER,1,3) FROM HR.EMPLOYEES;
+SELECT DISTINCT SUBSTR(PHONE_NUMBER,1,3) GSM, COUNT( SUBSTR(PHONE_NUMBER,1,3)) OVER(PARTITION BY SUBSTR(PHONE_NUMBER,1,3)) AS TOTAL FROM HR.EMPLOYEES;
