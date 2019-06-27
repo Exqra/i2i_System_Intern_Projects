@@ -1,0 +1,45 @@
+/*
+Definiton : Write a PL/SQL program that prints out like sample output.
+Sample Output :
+      *
+     ***
+    *****
+   *******
+  *********
+ ***********
+*************
+Objectives : To learn SQL conditional claueses(IF THEN ELSE), loops(FOR, WHILE).
+*/
+ set serveroutput on;
+
+DECLARE
+    numberOfStarsPerSide NUMBER;
+    indexNumber NUMBER;
+BEGIN
+
+    numberOfStarsPerSide := 0;
+    indexNumber := 10;
+    
+    DBMS_OUTPUT.PUT_LINE('RECTANGLE:');
+    FOR i IN 1..(indexNumber + 1)
+    LOOP
+            FOR j IN 1..(indexNumber - numberOfStarsPerSide)
+            LOOP
+                DBMS_OUTPUT.PUT(' ');
+            END LOOP;
+            
+            DBMS_OUTPUT.PUT('*');
+            FOR j IN 1 .. (numberOfStarsPerSide * 2)
+            LOOP
+                DBMS_OUTPUT.PUT('*');
+            END LOOP;
+            
+            FOR j IN 1..(indexNumber - numberOfStarsPerSide)
+            LOOP
+                DBMS_OUTPUT.PUT(' ');
+            END LOOP;
+            DBMS_OUTPUT.PUT_LINE('');
+            numberOfStarsPerSide := numberOfStarsPerSide + 1;
+    END LOOP;
+END;
+/
