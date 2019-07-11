@@ -1,0 +1,28 @@
+SET SERVEROUTPUT ON;
+
+CREATE OR REPLACE PROCEDURE FIND_RICHEST
+IS
+
+    BEGIN
+        DECLARE
+        
+        EMPLOYEE_NAME HR.EMPLOYEES.FIRST_NAME%TYPE;
+        EMPLOYEE_SALARY HR.EMPLOYEES.SALARY%TYPE;
+        EMPLOYEE_CONVERTED_SALARY HR.EMPLOYEES.SALARY%TYPE;
+
+
+        BEGIN
+            SELECT MAX(SALARY)INTO EMPLOYEE_SALARY FROM HR.EMPLOYEES;
+            EMPLOYEE_CONVERTED_SALARY := EMPLOYEE_SALARY * 0.17;
+            SELECT FIRST_NAME INTO EMPLOYEE_NAME FROM HR.EMPLOYEES WHERE SALARY = EMPLOYEE_SALARY;
+            DBMS_OUTPUT.PUT_LINE('Name of richest employee in company -> ' || 
+                EMPLOYEE_NAME);
+            DBMS_OUTPUT.PUT_LINE('Salary of richest as TL employee in company -> ' || 
+                EMPLOYEE_SALARY);
+            DBMS_OUTPUT.PUT_LINE('Salary of richest as dollar employee in company -> ' || 
+                EMPLOYEE_CONVERTED_SALARY);
+        END;
+
+    END FIND_RICHEST;
+/
+EXECUTE FIND_RICHEST();
