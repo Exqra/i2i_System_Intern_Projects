@@ -1,0 +1,10 @@
+set serveroutput on
+
+DECLARE
+    the_date VARCHAR2(50);
+BEGIN
+
+    SELECT TO_CHAR(sysdate, 'DAY') INTO the_date FROM DUAL;
+    DBMS_OUTPUT.PUT_LINE(the_date);
+END;
+/
